@@ -9,7 +9,16 @@ spin () {
 
 local pid=$!
 local delay=0.25
-local spinner=( '█■■■■' '■█■■■' '■■█■■' '■■■█■' '■■■■█' )
+local spinner=( '
+  _______          ___   _     ______ ______ 
+ |  __ \ \        / / \ | |   |____  |____  |
+ | |  | \ \  /\  / /|  \| |______ / /    / / 
+ | |  | |\ \/  \/ / | . ` |______/ /    / /  
+ | |__| | \  /\  /  | |\  |     / /    / /   
+ |_____/   \/  \/   |_| \_|    /_/    /_/    
+                                             
+                                             
+' )
 
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
@@ -93,7 +102,7 @@ THEADER ()
 {
 clear;
 echo -e "\033[01;32m
-Remo773 (2020)
+SK-DWN77 (2024)
 		
 	menu
 +---------------------------*/
@@ -116,7 +125,7 @@ if [[ ${#PROC} -gt 8 ]]; then
 	sleep 4
 	clear
 echo -e "\033[01;32m
-Remo773 (2020)
+SK-DWN77 (2024)
 
 	menu
 +---------------------------*/
@@ -151,12 +160,12 @@ tput setaf 3
 read -p  "Do you want to setup this ? (y/n) " PROC32
 tput sgr 0
 if [[ ${PROC32} == [Y/y] ]]; then
-	if [ -e $HOME/t-header.txt ]; then
-		rm $HOME/t-header.txt;
+	if [ -e $HOME/SK-DWN77.txt ]; then
+		rm $HOME/SK-DWN77.txt;
 	fi
 
-	if [ -d $HOME/T-Header ]; then
-	cd $HOME/T-Header
+	if [ -d $HOME/SK-DWN77 ]; then
+	cd $HOME/SK-DWN77
 	fi
 #if [ -e $HOME/.zshrc ]; then
 #	rm -rf ~/.zshrc
@@ -214,15 +223,15 @@ exit
 }
 
 clear;
-echo -e "\033[31m$(figlet -f Remo773 "T- Header")\e[0m"
+echo -e "\033[31m$(figlet -f Remo773 "SK- DWN")\e[0m"
 echo -e "\e[1;32m
 +----------------------------------*/
-Remo773 : (\e[33m14.4.2021\e[32m)
+SK-DWN77 : (\e[33m14.4.2021\e[32m)
 
 1. Oh-my-zsh
 2. Zsh-syntax-highlight (\e[33mplugins\e[01;32m)
 3. Zsh-command-autosuggest (\e[33mplugins\e[01;32m)
-4. Terminal-Header
+4. Terminal-SK-DWN77
 5. Custom PS1 prompt ( \e[33mBest one\e[1;32m )
 +----------------------------------*/
 \033[0m";
@@ -300,7 +309,7 @@ done
 
 
 
-	THEADER
+	SKDWN77
 	
 	
 else
